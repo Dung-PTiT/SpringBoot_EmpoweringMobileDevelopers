@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mentor - Bootstrap 4 Admin Dashboard Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content="Admin template that can be used to build dashboards for CRM, CMS, etc."/>
+    <meta name="author" content="Potenza Global Solutions"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">EMD</title>
+    <link rel="shortcut icon" th:href="@{/assets/img/favicon.ico}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/vendors.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/style.css}"/>
+</head>
+<body class="sidebar-mini">
+<div class="app">
+    <div class="app-wrap">
+        <div class="loader">
+            <div class="h-100 d-flex justify-content-center">
+                <div class="align-self-center">
+                    <img th:src="@{/assets/img/loader/loader.svg}" alt="loader">
+                </div>
+            </div>
+        </div>
+        <header class="app-header top-bar">
+            <nav class="navbar navbar-expand-md">
+                <div class="navbar-header d-flex align-items-center">
+                    <a href="#" class="mobile-toggle"><i class="ti ti-align-right"></i></a>
+                    <a class="navbar-brand" href="#">
+                        <img th:src="@{/assets/img/logo.png}" class="img-fluid logo-desktop" alt="logo"/>
+                        <img th:src="@{/assets/img/logo-icon.png}" class="img-fluid logo-mobile" alt="logo"/>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="ti ti-align-left"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navigation d-flex">
+                        <ul class="navbar-nav nav-left">
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti ti-cloud"></i>
+                                    Devices
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link  text-warning" id="navbarDropdown1" role="button"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti ti-alarm-clock"></i>
+                                    Sessions
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link  text-warning" id="navbarDropdown2" role="button"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti ti-new-window"></i>
+                                    Apps
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link  text-warning" id="navbarDropdown3" role="button"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti ti-download"></i>
+                                    Download
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="app-container">
+            <aside class="app-navbar">
+                <!-- begin sidebar-nav -->
+                <div class="sidebar-nav scrollbar scroll_light">
+                    <ul class="metismenu " id="sidebarNav">
+
+                        <li><a href="#" aria-expanded="false"><i class="nav-icon ti ti-dashboard"></i><span
+                                class="nav-title">Chat</span></a></li>
+                        <li><a href="#" aria-expanded="false"><i class="nav-icon ti ti-ticket"></i><span
+                                class="nav-title">Chat</span></a></li>
+                        <li><a href="#" aria-expanded="false"><i class="nav-icon ti ti-comment"></i><span
+                                class="nav-title">Chat</span></a></li>
+                        <li><a href="#" aria-expanded="false"><i class="nav-icon ti ti-bag"></i><span
+                                class="nav-title">Chat</span></a></li>
+                    </ul>
+                </div>
+                <!-- end sidebar-nav -->
+            </aside>
+        </div>
+
+        <div class="app-main" id="main">
+            <!-- begin container-fluid -->
+            <div class="container-fluid">
+                <section layout:fragment="content_body">
+                </section>
+                        <footer class="footer">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 text-center text-sm-left">
+                                    <p>&copy; Copyright 2019. All rights reserved.</p>
+                                </div>
+                                <div class="col  col-sm-6 ml-sm-auto text-center text-sm-right">
+                                    <p>Hand-crafted made with <i class="fa fa-heart text-danger mx-1"></i> by DungPTIT_D16</p>
+                                </div>
+                            </div>
+                        </footer>
+            </div>
+            <!-- end container-fluid -->
+
+        </div>
+    </div>
+</div>
+<script th:src="@{/assets/js/vendors.js}"></script>
+<script th:src="@{/assets/js/app.js}"></script>
+</body>
+</html>
