@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout/template}">
 <head>
-    <title>Home</title>
+    <title>Table plans</title>
 </head>
 <body>
 <section layout:fragment="content_body">
@@ -17,23 +17,42 @@
                 <div class="card-header d-flex justify-content-between">
                     <div class="card-heading">
                         <div class="input-group mb-1">
-                             <input type="text" class="form-control" placeholder="Gõ tên dự án để tìm kiếm" aria-label="Gõ tên dự án để tìm kiếm" aria-describedby="button-addon2" style="border-radius: 8px">
+                            <input type="text" class="form-control" placeholder="Gõ tên dự án để tìm kiếm"
+                                   aria-label="Gõ tên dự án để tìm kiếm" aria-describedby="button-addon2"
+                                   style="border-radius: 8px">
                             <div class="input-group-append ml-2">
-                                <button class="btn btn-primary" type="button" id="button-addon2" style="border-radius: 8px">
+                                <button class="btn btn-primary" type="button" id="button-addon2"
+                                        style="border-radius: 8px">
                                     <i class="ti ti-search"></i>
-                                    Tìm kiếm</button>
+                                    Tìm kiếm
+                                </button>
                             </div>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary   dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown button
-                            </button>
-                            <button class="btn btn-primary   dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown button
-                            </button>
-                            <button class="btn btn-primary   dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown button
-                            </button>
+                            <div class="ml-5">
+                                <select class="form-control" id="year" style="height: 100%">
+                                    <option selected>2019</option>
+                                    <option>2018</option>
+                                    <option>2017</option>
+                                    <option>2016</option>
+                                    <option>2015</option>
+                                </select>
+                            </div>
+                            <div class="ml-2">
+                                <select class="form-control" id="process" style="height: 100%">
+                                    <option selected>Chọn mức hoàn thành</option>
+                                    <option>80%-100%</option>
+                                    <option>50%-80%</option>
+                                    <option>0%-50%</option>
+                                </select>
+                            </div>
+                            <div class="ml-2">
+                                <select class="form-control" id="" style="height: 100%">
+                                    <option selected>Chọn đơn vị</option>
+                                    <option>2018</option>
+                                    <option>2017</option>
+                                    <option>2016</option>
+                                    <option>2015</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -44,152 +63,204 @@
                                 <div class="col-xxl-9 m-b-30">
                                     <div class="card card-statistics dating-contant h-100 mb-0">
                                         <div class="card-header">
-                                            <h4 class="card-title">View all tickets</h4>
+                                            <h5 class="card-title">Thông tin chi tiết</h5>
                                         </div>
-                                        <div class="card-body pt-2 scrollbar scroll_dark mCustomScrollbar _mCS_3 mCS-autoHide" style="height: 300px; position: relative; overflow: visible;"><div id="mCSB_3" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;"><div id="mCSB_3_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px;" dir="ltr">
-                                            <div class="table-responsive">
-                                                <table id="datatable-buttons" class="table table-striped">
-                                                    <thead>
-                                                    <tr>
-                                                        <th class="border-top-0">No.</th>
-                                                        <th class="border-top-0">User Name</th>
-                                                        <th class="border-top-0">Subject</th>
-                                                        <th class="border-top-0">Status</th>
-                                                        <th class="border-top-0">Date</th>
-                                                        <th class="border-top-0">Action</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody class="text-muted">
-                                                    <tr>
-                                                        <td>00001</td>
-                                                        <td>
-                                                            <div class="bg-img">
-                                                                <img class="img-fluid mCS_img_loaded" src="assets/img/avtar/01.jpg" alt="user">
-                                                            </div>
-                                                            <p>Adrian Demiandro</p>
-                                                        </td>
-                                                        <td>Support Lead</td>
-                                                        <td>
-                                                            <label class="badge mb-0 badge-success-inverse">Completed</label>
-                                                        </td>
-                                                        <td>27/3/2018</td>
-                                                        <td>
-                                                            <a href="javascript:void(0)" class="mr-2"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <a href="javascript:void(0)"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>00002</td>
-                                                        <td>
-                                                            <div class="bg-img">
-                                                                <img class="img-fluid mCS_img_loaded" src="assets/img/avtar/02.jpg" alt="user2">
-                                                            </div>
-                                                            <p>Jenny Smithdro</p>
-                                                        </td>
-                                                        <td>Office Manager</td>
-                                                        <td>
-                                                            <label class="badge mb-0 badge-danger-inverse">Cancelled</label>
-                                                        </td>
-                                                        <td>29/3/2018</td>
-                                                        <td>
-                                                            <a href="javascript:void(0)" class="mr-2"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <a href="javascript:void(0)"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>00003</td>
-                                                        <td>
-                                                            <div class="bg-img">
-                                                                <img class="img-fluid mCS_img_loaded" src="assets/img/avtar/03.jpg" alt="user3">
-                                                            </div>
-                                                            <p>Brian Joedro</p>
-                                                        </td>
-                                                        <td>Sales Assistant</td>
-                                                        <td>
-                                                            <label class="badge mb-0 badge-warning-inverse">Pending</label>
-                                                        </td>
-                                                        <td>01/04/2018</td>
-                                                        <td>
-                                                            <a href="javascript:void(0)" class="mr-2"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <a href="javascript:void(0)"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>00004</td>
-                                                        <td>
-                                                            <div class="bg-img">
-                                                                <img class="img-fluid mCS_img_loaded" src="assets/img/avtar/04.jpg" alt="user4">
-                                                            </div>
-                                                            <p>Sandradro Garett</p>
-                                                        </td>
-                                                        <td>Integration Specialist</td>
-                                                        <td>
-                                                            <label class="badge mb-0 badge-success-inverse">Completed</label>
-                                                        </td>
-                                                        <td>10/04/2018</td>
-                                                        <td>
-                                                            <a href="javascript:void(0)" class="mr-2"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <a href="javascript:void(0)"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>00005</td>
-                                                        <td>
-                                                            <div class="bg-img">
-                                                                <img class="img-fluid mCS_img_loaded" src="assets/img/avtar/05.jpg" alt="user5">
-                                                            </div>
-                                                            <p>Garydro</p>
-                                                        </td>
-                                                        <td>Senior Javascript Developer</td>
-                                                        <td>
-                                                            <label class="badge mb-0 badge-success-inverse">Completed</label>
-                                                        </td>
-                                                        <td>15/04/2018</td>
-                                                        <td>
-                                                            <a href="javascript:void(0)" class="mr-2"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <a href="javascript:void(0)"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>00006</td>
-                                                        <td>
-                                                            <div class="bg-img">
-                                                                <img class="img-fluid mCS_img_loaded" src="assets/img/avtar/06.jpg" alt="user6">
-                                                            </div>
-                                                            <p>Andrew dro</p>
-                                                        </td>
-                                                        <td>Accountant</td>
-                                                        <td>
-                                                            <label class="badge mb-0 badge-warning-inverse">Pending</label>
-                                                        </td>
-                                                        <td>22/04/2018</td>
-                                                        <td>
-                                                            <a href="javascript:void(0)" class="mr-2"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <a href="javascript:void(0)"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>00007</td>
-                                                        <td>
-                                                            <div class="bg-img">
-                                                                <img class="img-fluid mCS_img_loaded" src="assets/img/avtar/01.jpg" alt="user7">
-                                                            </div>
-                                                            <p>Stonedro</p>
-                                                        </td>
-                                                        <td>System Architect</td>
-                                                        <td>
-                                                            <label class="badge mb-0 badge-danger-inverse">Cancelled</label>
-                                                        </td>
-                                                        <td>27/04/2018</td>
-                                                        <td>
-                                                            <a href="javascript:void(0)" class="mr-2"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <a href="javascript:void(0)"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
+                                        <div class="card-body pt-2 scrollbar scroll_dark mCustomScrollbar _mCS_3 mCS-autoHide"
+                                             style="height: 300px; position: relative; overflow: visible;">
+                                            <div id="mCSB_3"
+                                                 class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
+                                                 tabindex="0" style="max-height: none;">
+                                                <div id="mCSB_3_container" class="mCSB_container"
+                                                     style="position: relative; top: 0px; left: 0px;" dir="ltr">
+                                                    <div class="table-responsive">
+                                                        <table id="datatable-buttons" class="table table-striped">
+                                                            <thead>
+                                                            <tr>
+                                                                <th class="border-top-0">No.</th>
+                                                                <th class="border-top-0">User Name</th>
+                                                                <th class="border-top-0">Subject</th>
+                                                                <th class="border-top-0">Status</th>
+                                                                <th class="border-top-0">Date</th>
+                                                                <th class="border-top-0">Action</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody class="text-muted">
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>
+                                                                    <div class="bg-img">
+                                                                        <img class="img-fluid mCS_img_loaded"
+                                                                             th:src="@{/assets/img/avtar/01.jpg}"
+                                                                             alt="user">
+                                                                    </div>
+                                                                    <p>Adrian Demiandro</p>
+                                                                </td>
+                                                                <td>Support Lead</td>
+                                                                <td>
+                                                                    <label class="badge mb-0 badge-success-inverse">Completed</label>
+                                                                </td>
+                                                                <td>27/3/2018</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-eye" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Detail"></i>
+                                                                    </a>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Edit"></i>
+                                                                    </a>
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                                                    data-toggle="tooltip"
+                                                                                                    data-placement="top"
+                                                                                                    title=""
+                                                                                                    data-original-title="Delete"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>
+                                                                    <div class="bg-img">
+                                                                        <img class="img-fluid mCS_img_loaded"
+                                                                             th:src="@{/assets/img/avtar/02.jpg}" alt="user2">
+                                                                    </div>
+                                                                    <p>Jenny Smithdro</p>
+                                                                </td>
+                                                                <td>Office Manager</td>
+                                                                <td>
+                                                                    <label class="badge mb-0 badge-danger-inverse">Cancelled</label>
+                                                                </td>
+                                                                <td>29/3/2018</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-eye" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Detail"></i>
+                                                                    </a>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Edit"></i>
+                                                                    </a>
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                                                    data-toggle="tooltip"
+                                                                                                    data-placement="top"
+                                                                                                    title=""
+                                                                                                    data-original-title="Delete"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>
+                                                                    <div class="bg-img">
+                                                                        <img class="img-fluid mCS_img_loaded"
+                                                                             th:src="@{/assets/img/avtar/03.jpg}" alt="user3">
+                                                                    </div>
+                                                                    <p>Brian Joedro</p>
+                                                                </td>
+                                                                <td>Sales Assistant</td>
+                                                                <td>
+                                                                    <label class="badge mb-0 badge-warning-inverse">Pending</label>
+                                                                </td>
+                                                                <td>01/04/2018</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-eye" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Detail"></i>
+                                                                    </a>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Edit"></i></a>
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                                                    data-toggle="tooltip"
+                                                                                                    data-placement="top"
+                                                                                                    title=""
+                                                                                                    data-original-title="Delete"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>
+                                                                    <div class="bg-img">
+                                                                        <img class="img-fluid mCS_img_loaded"
+                                                                             th:src="@{/assets/img/avtar/04.jpg}" alt="user4">
+                                                                    </div>
+                                                                    <p>Sandradro Garett</p>
+                                                                </td>
+                                                                <td>Integration Specialist</td>
+                                                                <td>
+                                                                    <label class="badge mb-0 badge-success-inverse">Completed</label>
+                                                                </td>
+                                                                <td>10/04/2018</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-eye" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Detail"></i>
+                                                                    </a>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Edit"></i></a>
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                                                    data-toggle="tooltip"
+                                                                                                    data-placement="top"
+                                                                                                    title=""
+                                                                                                    data-original-title="Delete"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5</td>
+                                                                <td>
+                                                                    <div class="bg-img">
+                                                                        <img class="img-fluid mCS_img_loaded"
+                                                                             th:src="@{/assets/img/avtar/05.jpg}" alt="user5">
+                                                                    </div>
+                                                                    <p>Garydro</p>
+                                                                </td>
+                                                                <td>Senior Javascript Developer</td>
+                                                                <td>
+                                                                    <label class="badge mb-0 badge-success-inverse">Completed</label>
+                                                                </td>
+                                                                <td>15/04/2018</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-eye" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Detail"></i>
+                                                                    </a>
+                                                                    <a href="javascript:void(0)" class="mr-2"><i
+                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                            data-placement="top" title=""
+                                                                            data-original-title="Edit"></i></a>
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                                                    data-toggle="tooltip"
+                                                                                                    data-placement="top"
+                                                                                                    title=""
+                                                                                                    data-original-title="Delete"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div></div><div id="mCSB_3_scrollbar_vertical" class="mCSB_scrollTools mCSB_3_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_3_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; display: block; height: 161px; max-height: 266px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+                                            <div id="mCSB_3_scrollbar_vertical"
+                                                 class="mCSB_scrollTools mCSB_3_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
+                                                 style="display: block;">
+                                                <div class="mCSB_draggerContainer">
+                                                    <div id="mCSB_3_dragger_vertical" class="mCSB_dragger"
+                                                         style="position: absolute; min-height: 50px; display: block; height: 161px; max-height: 266px; top: 0px;">
+                                                    </div>
+                                                    <div class="mCSB_draggerRail"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
