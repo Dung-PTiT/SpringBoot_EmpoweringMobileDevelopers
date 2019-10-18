@@ -1,396 +1,342 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/template}">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/template}">
 <head>
     <title>Home</title>
 </head>
 <body>
-    <section layout:fragment="content_body">
-        <div class="row">
-            <div class="col-md-12 m-b-30">
-                <div class="d-block d-lg-flex flex-nowrap align-items-center">
-                    <div class="page-title mr-4 pr-4 border-right">
-                        <h1>Dashboard</h1>
-                    </div>
-                    <div class="breadcrumb-bar align-items-center">
-                        <nav>
-                            <ol class="breadcrumb p-0 m-b-0">
-                                <li class="breadcrumb-item">
-                                    <a href="#"><i class="ti ti-home"></i></a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    Dashboard
-                                </li>
-                                <li class="breadcrumb-item active text-primary" aria-current="page">Default</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <div class="ml-auto d-flex align-items-center secondary-menu text-center">
-                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Todo list">
-                            <i class="fe fe-edit btn btn-icon text-primary"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Projects">
-                            <i class="fa fa-lightbulb-o btn btn-icon text-success"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Task">
-                            <i class="fa fa-check btn btn-icon text-warning"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Calendar">
-                            <i class="fa fa-calendar-o btn btn-icon text-cyan"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Analytics">
-                            <i class="fa fa-bar-chart-o btn btn-icon text-danger"></i>
-                        </a>
-                    </div>
+<section layout:fragment="content_body">
+    <div class="row">
+        <div class="col-md-12 m-b-30">
+            <div class="d-block d-lg-flex flex-nowrap align-items-center">
+                <div class="page-title mr-4 pr-4 border-right">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="breadcrumb-bar align-items-center">
+                    <nav>
+                        <ol class="breadcrumb p-0 m-b-0">
+                            <li class="breadcrumb-item">
+                                <a href="#"><i class="ti ti-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                Dashboard
+                            </li>
+                            <li class="breadcrumb-item active text-primary" aria-current="page">Default</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="ml-auto d-flex align-items-center secondary-menu text-center">
+                    <span class="font-weight-bold">Status</span>
+                    <a href="#" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="Online">
+                        <i class="fa fa-check btn btn-icon text-success" style="border-radius: 100%;"></i>
+                    </a>
+                    <a href="#" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="Busy">
+                        <i class="fa fa-check btn btn-icon text-warning" style="border-radius: 100%;"></i>
+                    </a>
+                    <a href="#" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="Offline">
+                        <i class="fa fa-check btn btn-icon text-muted" style="border-radius: 100%;"></i>
+                    </a>
+                    <a href="#" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="Kobiton devices">
+                        <i class="fa fa-cloud btn btn-icon text-blue" style="border-radius: 100%; color: #b400ff"></i>
+                    </a>
+                    <a href="#" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="Organization devices">
+                        <i class="fa fa-user btn btn-icon text-dark" style="border-radius: 100%; color: #000000"></i>
+                    </a>
+                    <a href="#" class="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="My devices">
+                        <i class="fa fa-check btn btn-icon text-info" style="border-radius: 100%;"></i>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xxl-7 m-b-30">
-                <div class="card card-statistics h-100 mb-0 apexchart-tool-force-top">
-                    <div class="card-header d-flex justify-content-between">
-                        <div class="card-heading">
-                            <h4 class="card-title">Favorites Devices</h4>
-                        </div>
+    </div>
+    <div class="row">
+        <div class="col-xxl-7 m-b-30">
+            <div class="card card-statistics h-100 mb-0 apexchart-tool-force-top">
+                <div class="card-header d-flex justify-content-between">
+                    <div class="card-heading">
+                        <h4 class="card-title">Favorites Devices</h4>
                     </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-12 px-0">
-                                <div class="row">
-                                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
-                                        <div class="card card-statistics contact-contant">
-                                            <div class="card-body py-4">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="bg-img">
-                                                        <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="ml-3">
-                                                        <h4 class="mb-0">Galaxy A3(2016)</h4>
-                                                        <i class="ti ti-star" style="color: #ffd300"></i>
-                                                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <div class="row">
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
+                                    <div class="card card-statistics contact-contant" style="background-color: #f8dfb5">
+                                        <div class="card-body py-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-img">
+                                                    <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
                                                 </div>
-                                                <div>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-mobile"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>021-843-8478</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-phone"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>40-1440-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-envelope-o"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>Lizzy.Halfman@gmail.com</p>
-                                                        </li>
-                                                    </ul>
+                                                <div class="ml-3">
+                                                    <h4 class="mb-0">Galaxy A3(2016)</h4>
+                                                    <i class="ti ti-star" style="color: #ffd300"></i>
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-mobile"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <p>Android 6.0.1</p>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-phone"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <i class="fa fa-cloud btn btn-icon text-blue tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kobiton devices" style="border-radius: 100%; color: #b400ff"></i>
+                                                        <i class="fa fa-check btn btn-icon text-success tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Online" style="border-radius: 100%;"></i>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
-                                        <div class="card card-statistics contact-contant">
-                                            <div class="card-body py-4">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="bg-img">
-                                                        <img th:src="@{/assets/img/avtar/02.jpg}" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="ml-3">
-                                                        <h4 class="mb-0">Galaxy A3(2016)</h4>
-                                                        <i class="ti ti-star" style="color: #ffd300"></i>
-                                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
+                                    <div class="card card-statistics contact-contant">
+                                        <div class="card-body py-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-img">
+                                                    <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
                                                 </div>
-                                                <div>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon">
-                                                                <div class="img-icon"><i class="fa fa-mobile"></i></div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>026-123-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-phone"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>80-1230-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-envelope-o"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>Samuel.Woods@gmail.com</p>
-                                                        </li>
-                                                    </ul>
+                                                <div class="ml-3">
+                                                    <h4 class="mb-0">Galaxy A3(2016)</h4>
+                                                    <i class="ti ti-star" style="color: #ffd300"></i>
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-mobile"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <p>Android 6.0.1</p>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-phone"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <i class="fa fa-cloud btn btn-icon text-blue tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kobiton devices" style="border-radius: 100%; color: #b400ff"></i>
+                                                        <i class="fa fa-check btn btn-icon text-success tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Online" style="border-radius: 100%;"></i>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xxl-3 col-xl-3 col-lg-3  col-sm-6">
-                                        <div class="card card-statistics contact-contant">
-                                            <div class="card-body py-4">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="bg-img">
-                                                        <img th:src="@{/assets/img/avtar/03.jpg}" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="ml-3">
-                                                        <h4 class="mb-0">Galaxy A3(2016)</h4>
-                                                        <i class="ti ti-star" style="color: #ffd300"></i>
-                                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
+                                    <div class="card card-statistics contact-contant">
+                                        <div class="card-body py-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-img">
+                                                    <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
                                                 </div>
-                                                <div>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-mobile"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>026-123-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-phone"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>80-1230-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-envelope-o"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>Garettdon@gmail.com</p>
-                                                        </li>
-                                                    </ul>
+                                                <div class="ml-3">
+                                                    <h4 class="mb-0">Galaxy A3(2016)</h4>
+                                                    <i class="ti ti-star" style="color: #ffd300"></i>
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-mobile"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <p>Android 6.0.1</p>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-phone"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <i class="fa fa-cloud btn btn-icon text-blue tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kobiton devices" style="border-radius: 100%; color: #b400ff"></i>
+                                                        <i class="fa fa-check btn btn-icon text-success tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Online" style="border-radius: 100%;"></i>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xxl-3 col-xl-3 col-lg-3  col-sm-6">
-                                        <div class="card card-statistics contact-contant">
-                                            <div class="card-body py-4">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="bg-img">
-                                                        <img th:src="@{/assets/img/avtar/04.jpg}" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="ml-3">
-                                                        <h4 class="mb-0">Galaxy A3(2016)</h4>
-                                                        <i class="ti ti-star" style="color: #ffd300"></i>
-                                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
+                                    <div class="card card-statistics contact-contant">
+                                        <div class="card-body py-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-img">
+                                                    <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
                                                 </div>
-                                                <div>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-mobile"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>026-123-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-phone"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>80-1230-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-envelope-o"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>Garynice@gmail.com</p>
-                                                        </li>
-                                                    </ul>
+                                                <div class="ml-3">
+                                                    <h4 class="mb-0">Galaxy A3(2016)</h4>
+                                                    <i class="ti ti-star" style="color: #ffd300"></i>
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-mobile"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <p>Android 6.0.1</p>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-phone"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <i class="fa fa-cloud btn btn-icon text-blue tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kobiton devices" style="border-radius: 100%; color: #b400ff"></i>
+                                                        <i class="fa fa-check btn btn-icon text-success tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Online" style="border-radius: 100%;"></i>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 px-0">
-                                <div class="row">
-                                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
-                                        <div class="card card-statistics contact-contant">
-                                            <div class="card-body py-4">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="bg-img">
-                                                        <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="ml-3">
-                                                        <h4 class="mb-0">Galaxy A3(2016)</h4>
-                                                        <i class="ti ti-star" style="color: #ffd300"></i>
-                                                    </div>
+                            <div class="row">
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
+                                    <div class="card card-statistics contact-contant">
+                                        <div class="card-body py-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-img">
+                                                    <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
                                                 </div>
-                                                <div>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-mobile"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>021-843-8478</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-phone"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>40-1440-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-envelope-o"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>Lizzy.Halfman@gmail.com</p>
-                                                        </li>
-                                                    </ul>
+                                                <div class="ml-3">
+                                                    <h4 class="mb-0">Galaxy A3(2016)</h4>
+                                                    <i class="ti ti-star" style="color: #ffd300"></i>
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-mobile"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <p>Android 6.0.1</p>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-phone"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <i class="fa fa-cloud btn btn-icon text-blue tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kobiton devices" style="border-radius: 100%; color: #b400ff"></i>
+                                                        <i class="fa fa-check btn btn-icon text-success tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Online" style="border-radius: 100%;"></i>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
-                                        <div class="card card-statistics contact-contant">
-                                            <div class="card-body py-4">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="bg-img">
-                                                        <img th:src="@{/assets/img/avtar/02.jpg}" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="ml-3">
-                                                        <h4 class="mb-0">Galaxy A3(2016)</h4>
-                                                        <i class="ti ti-star" style="color: #ffd300"></i>
-                                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
+                                    <div class="card card-statistics contact-contant">
+                                        <div class="card-body py-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-img">
+                                                    <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
                                                 </div>
-                                                <div>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon">
-                                                                <div class="img-icon"><i class="fa fa-mobile"></i></div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>026-123-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-phone"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>80-1230-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-envelope-o"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>Samuel.Woods@gmail.com</p>
-                                                        </li>
-                                                    </ul>
+                                                <div class="ml-3">
+                                                    <h4 class="mb-0">Galaxy A3(2016)</h4>
+                                                    <i class="ti ti-star" style="color: #ffd300"></i>
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-mobile"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <p>Android 6.0.1</p>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-phone"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <i class="fa fa-cloud btn btn-icon text-blue tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kobiton devices" style="border-radius: 100%; color: #b400ff"></i>
+                                                        <i class="fa fa-check btn btn-icon text-success tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Online" style="border-radius: 100%;"></i>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xxl-3 col-xl-3 col-lg-3  col-sm-6">
-                                        <div class="card card-statistics contact-contant">
-                                            <div class="card-body py-4">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="bg-img">
-                                                        <img th:src="@{/assets/img/avtar/03.jpg}" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="ml-3">
-                                                        <h4 class="mb-0">Galaxy A3(2016)</h4>
-                                                        <i class="ti ti-star" style="color: #ffd300"></i>
-                                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
+                                    <div class="card card-statistics contact-contant">
+                                        <div class="card-body py-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-img">
+                                                    <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
                                                 </div>
-                                                <div>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-mobile"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>026-123-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-phone"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>80-1230-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-envelope-o"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>Garettdon@gmail.com</p>
-                                                        </li>
-                                                    </ul>
+                                                <div class="ml-3">
+                                                    <h4 class="mb-0">Galaxy A3(2016)</h4>
+                                                    <i class="ti ti-star" style="color: #ffd300"></i>
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-mobile"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <p>Android 6.0.1</p>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-phone"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <i class="fa fa-cloud btn btn-icon text-blue tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kobiton devices" style="border-radius: 100%; color: #b400ff"></i>
+                                                        <i class="fa fa-check btn btn-icon text-success tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Online" style="border-radius: 100%;"></i>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xxl-3 col-xl-3 col-lg-3  col-sm-6">
-                                        <div class="card card-statistics contact-contant">
-                                            <div class="card-body py-4">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="bg-img">
-                                                        <img th:src="@{/assets/img/avtar/04.jpg}" alt="" class="img-fluid">
-                                                    </div>
-                                                    <div class="ml-3">
-                                                        <h4 class="mb-0">Galaxy A3(2016)</h4>
-                                                        <i class="ti ti-star" style="color: #ffd300"></i>
-                                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-sm-6">
+                                    <div class="card card-statistics contact-contant">
+                                        <div class="card-body py-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-img">
+                                                    <img th:src="@{/assets/img/avtar/01.jpg}" alt="" class="img-fluid">
                                                 </div>
-                                                <div>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-mobile"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>026-123-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-phone"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>80-1230-8546</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="nav">
-                                                        <li class="nav-item">
-                                                            <div class="img-icon"><i class="fa fa-envelope-o"></i></div>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <p>Garynice@gmail.com</p>
-                                                        </li>
-                                                    </ul>
+                                                <div class="ml-3">
+                                                    <h4 class="mb-0">Galaxy A3(2016)</h4>
+                                                    <i class="ti ti-star" style="color: #ffd300"></i>
                                                 </div>
+                                            </div>
+                                            <div>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-mobile"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <p>Android 6.0.1</p>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav">
+                                                    <li class="nav-item">
+                                                        <div class="img-icon"><i class="fa fa-phone"></i></div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <i class="fa fa-cloud btn btn-icon text-blue tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kobiton devices" style="border-radius: 100%; color: #b400ff"></i>
+                                                        <i class="fa fa-check btn btn-icon text-success tooltip-wrapper" data-toggle="tooltip" data-placement="top" title="" data-original-title="Online" style="border-radius: 100%;"></i>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -401,6 +347,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 </body>
 </html>
