@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
       layout:decorate="~{layout/template}">
 <head>
     <title>Table plans</title>
@@ -29,7 +29,8 @@
                             </div>
                             <div class="ml-5">
                                 <select class="form-control" id="year" style="height: 100%">
-                                    <option selected>2019</option>
+                                    <option value="" disabled selected>Chọn năm</option>
+                                    <option>2019</option>
                                     <option>2018</option>
                                     <option>2017</option>
                                     <option>2016</option>
@@ -38,19 +39,19 @@
                             </div>
                             <div class="ml-2">
                                 <select class="form-control" id="process" style="height: 100%">
-                                    <option selected>Chọn mức hoàn thành</option>
-                                    <option>80%-100%</option>
-                                    <option>50%-80%</option>
-                                    <option>0%-50%</option>
+                                    <option value="" disabled selected>Chọn mức hoàn thành</option>
+                                    <option>70%-100%</option>
+                                    <option>30%-70%</option>
+                                    <option>0%-30%</option>
                                 </select>
                             </div>
                             <div class="ml-2">
                                 <select class="form-control" id="" style="height: 100%">
-                                    <option selected>Chọn đơn vị</option>
-                                    <option>2018</option>
-                                    <option>2017</option>
-                                    <option>2016</option>
-                                    <option>2015</option>
+                                    <option value="" disabled selected>Chọn đơn vị</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
                                 </select>
                             </div>
                         </div>
@@ -62,8 +63,15 @@
                             <div class="row">
                                 <div class="col-xxl-9 m-b-30">
                                     <div class="card card-statistics dating-contant h-100 mb-0">
-                                        <div class="card-header">
-                                            <h5 class="card-title">Thông tin chi tiết</h5>
+                                        <div class=" row card-header">
+                                            <div class="col-sm-6"><h5 class="card-title">Thông tin chi tiết</h5></div>
+                                            <div class="col-sm-6 justify-content-end">
+                                                <button class="btn btn-primary"
+                                                        style="border-radius: 8px; margin-left: 79%">
+                                                    <i class="ti ti-plus"></i>
+                                                    Thêm mới
+                                                </button>
+                                            </div>
                                         </div>
                                         <div class="card-body pt-2 scrollbar scroll_dark mCustomScrollbar _mCS_3 mCS-autoHide"
                                              style="height: 300px; position: relative; overflow: visible;">
@@ -76,42 +84,31 @@
                                                         <table id="datatable-buttons" class="table table-striped">
                                                             <thead>
                                                             <tr>
-                                                                <th class="border-top-0">No.</th>
-                                                                <th class="border-top-0">User Name</th>
-                                                                <th class="border-top-0">Subject</th>
-                                                                <th class="border-top-0">Status</th>
-                                                                <th class="border-top-0">Date</th>
-                                                                <th class="border-top-0">Action</th>
+                                                                <th class="border-top-0">STT</th>
+                                                                <th class="border-top-0">Tên</th>
+                                                                <th class="border-top-0">Thời gian thêm</th>
+                                                                <th class="border-top-0">Tác vụ</th>
                                                             </tr>
                                                             </thead>
                                                             <tbody class="text-muted">
                                                             <tr>
                                                                 <td>1</td>
                                                                 <td>
-                                                                    <div class="bg-img">
-                                                                        <img class="img-fluid mCS_img_loaded"
-                                                                             th:src="@{/assets/img/avtar/01.jpg}"
-                                                                             alt="user">
-                                                                    </div>
                                                                     <p>Adrian Demiandro</p>
-                                                                </td>
-                                                                <td>Support Lead</td>
-                                                                <td>
-                                                                    <label class="badge mb-0 badge-success-inverse">Completed</label>
                                                                 </td>
                                                                 <td>27/3/2018</td>
                                                                 <td>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-eye" data-toggle="tooltip"
-                                                                            data-placement="top" title=""
-                                                                            data-original-title="Detail"></i>
+                                                                    <a th:href="@{/displayPlan}" class="tooltip-wrapper  mr-3"
+                                                                       data-toggle="tooltip" data-placement="top"
+                                                                       title="" data-original-title="View">
+                                                                        <i class="fa fa-eye text-warning"></i>
                                                                     </a>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                    <a href="javascript:void(0)" class="mr-3"><i
+                                                                            class="fa fa-pencil text-info" data-toggle="tooltip"
                                                                             data-placement="top" title=""
                                                                             data-original-title="Edit"></i>
                                                                     </a>
-                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash text-danger"
                                                                                                     data-toggle="tooltip"
                                                                                                     data-placement="top"
                                                                                                     title=""
@@ -122,29 +119,21 @@
                                                             <tr>
                                                                 <td>2</td>
                                                                 <td>
-                                                                    <div class="bg-img">
-                                                                        <img class="img-fluid mCS_img_loaded"
-                                                                             th:src="@{/assets/img/avtar/02.jpg}" alt="user2">
-                                                                    </div>
                                                                     <p>Jenny Smithdro</p>
-                                                                </td>
-                                                                <td>Office Manager</td>
-                                                                <td>
-                                                                    <label class="badge mb-0 badge-danger-inverse">Cancelled</label>
                                                                 </td>
                                                                 <td>29/3/2018</td>
                                                                 <td>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-eye" data-toggle="tooltip"
+                                                                    <a th:href="@{/displayPlan}" class="mr-3"><i
+                                                                            class="fa fa-eye text-warning" data-toggle="tooltip"
                                                                             data-placement="top" title=""
-                                                                            data-original-title="Detail"></i>
+                                                                            data-original-title="View"></i>
                                                                     </a>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                    <a href="javascript:void(0)" class="mr-3"><i
+                                                                            class="fa fa-pencil text-info" data-toggle="tooltip"
                                                                             data-placement="top" title=""
                                                                             data-original-title="Edit"></i>
                                                                     </a>
-                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash text-danger"
                                                                                                     data-toggle="tooltip"
                                                                                                     data-placement="top"
                                                                                                     title=""
@@ -155,28 +144,20 @@
                                                             <tr>
                                                                 <td>3</td>
                                                                 <td>
-                                                                    <div class="bg-img">
-                                                                        <img class="img-fluid mCS_img_loaded"
-                                                                             th:src="@{/assets/img/avtar/03.jpg}" alt="user3">
-                                                                    </div>
                                                                     <p>Brian Joedro</p>
-                                                                </td>
-                                                                <td>Sales Assistant</td>
-                                                                <td>
-                                                                    <label class="badge mb-0 badge-warning-inverse">Pending</label>
                                                                 </td>
                                                                 <td>01/04/2018</td>
                                                                 <td>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-eye" data-toggle="tooltip"
+                                                                    <a th:href="@{/displayPlan}" class="mr-3"><i
+                                                                            class="fa fa-eye text-warning" data-toggle="tooltip"
                                                                             data-placement="top" title=""
-                                                                            data-original-title="Detail"></i>
+                                                                            data-original-title="View"></i>
                                                                     </a>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                    <a href="javascript:void(0)" class="mr-3"><i
+                                                                            class="fa fa-pencil text-info" data-toggle="tooltip"
                                                                             data-placement="top" title=""
                                                                             data-original-title="Edit"></i></a>
-                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash text-danger"
                                                                                                     data-toggle="tooltip"
                                                                                                     data-placement="top"
                                                                                                     title=""
@@ -186,28 +167,20 @@
                                                             <tr>
                                                                 <td>4</td>
                                                                 <td>
-                                                                    <div class="bg-img">
-                                                                        <img class="img-fluid mCS_img_loaded"
-                                                                             th:src="@{/assets/img/avtar/04.jpg}" alt="user4">
-                                                                    </div>
                                                                     <p>Sandradro Garett</p>
-                                                                </td>
-                                                                <td>Integration Specialist</td>
-                                                                <td>
-                                                                    <label class="badge mb-0 badge-success-inverse">Completed</label>
                                                                 </td>
                                                                 <td>10/04/2018</td>
                                                                 <td>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-eye" data-toggle="tooltip"
+                                                                    <a th:href="@{/displayPlan}" class="mr-3"><i
+                                                                            class="fa fa-eye text-warning" data-toggle="tooltip"
                                                                             data-placement="top" title=""
-                                                                            data-original-title="Detail"></i>
+                                                                            data-original-title="View"></i>
                                                                     </a>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                    <a href="javascript:void(0)" class="mr-3"><i
+                                                                            class="fa fa-pencil text-info" data-toggle="tooltip"
                                                                             data-placement="top" title=""
                                                                             data-original-title="Edit"></i></a>
-                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash text-danger"
                                                                                                     data-toggle="tooltip"
                                                                                                     data-placement="top"
                                                                                                     title=""
@@ -217,28 +190,20 @@
                                                             <tr>
                                                                 <td>5</td>
                                                                 <td>
-                                                                    <div class="bg-img">
-                                                                        <img class="img-fluid mCS_img_loaded"
-                                                                             th:src="@{/assets/img/avtar/05.jpg}" alt="user5">
-                                                                    </div>
                                                                     <p>Garydro</p>
-                                                                </td>
-                                                                <td>Senior Javascript Developer</td>
-                                                                <td>
-                                                                    <label class="badge mb-0 badge-success-inverse">Completed</label>
                                                                 </td>
                                                                 <td>15/04/2018</td>
                                                                 <td>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-eye" data-toggle="tooltip"
+                                                                    <a th:href="@{/displayPlan}" class="mr-3"><i
+                                                                            class="fa fa-eye text-warning" data-toggle="tooltip"
                                                                             data-placement="top" title=""
-                                                                            data-original-title="Detail"></i>
+                                                                            data-original-title="View"></i>
                                                                     </a>
-                                                                    <a href="javascript:void(0)" class="mr-2"><i
-                                                                            class="fa fa-pencil" data-toggle="tooltip"
+                                                                    <a href="javascript:void(0)" class="mr-3"><i
+                                                                            class="fa fa-pencil text-info" data-toggle="tooltip"
                                                                             data-placement="top" title=""
                                                                             data-original-title="Edit"></i></a>
-                                                                    <a href="javascript:void(0)"><i class="fa fa-trash"
+                                                                    <a href="javascript:void(0)"><i class="fa fa-trash text-danger"
                                                                                                     data-toggle="tooltip"
                                                                                                     data-placement="top"
                                                                                                     title=""
@@ -260,6 +225,7 @@
                                                     <div class="mCSB_draggerRail"></div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>

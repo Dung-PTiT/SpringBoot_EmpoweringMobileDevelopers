@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/template}">
+<head>
+    <title>Plan</title>
+</head>
+<body>
+<section layout:fragment="content_body">
+    <div class="row" id="planTable">
+        <div class="col-xxl-7 m-b-20">
+            <div class="card card-statistics h-100 mb-0 apexchart-tool-force-top">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <div class="row">
+                                <div class="col-xxl-9 m-b-30">
+                                    <div class="card card-statistics dating-contant h-100 mb-0">
+                                        <div class=" row card-header">
+                                            <div class="col-sm-6"><h5 class="card-title">Thông tin chi tiết</h5></div>
+                                            <div class="col-sm-6 justify-content-end">
+                                                <a th:href="@{/displayPlanList}">
+                                                <button class="btn btn-primary"
+                                                        style="border-radius: 8px; margin-left: 79%">
+                                                    Back
+                                                    <i class="ti ti-share ml-2"></i>
+                                                </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-body pt-2 scrollbar scroll_dark mCustomScrollbar _mCS_3 mCS-autoHide"
+                                             style="height: 300px; position: relative; overflow: visible;">
+                                            <div id="mCSB_3"
+                                                 class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
+                                                 tabindex="0" style="max-height: none;">
+                                                <div id="mCSB_3_container" class="mCSB_container"
+                                                     style="position: relative; top: 0px; left: 0px;" dir="ltr">
+                                                    <div class="table-responsive">
+                                                        <table id="datatable-buttons" class="table table-striped">
+                                                            <thead>
+                                                            <tr>
+                                                                <th class="border-top-0">STT</th>
+                                                                <th class="border-top-0">Loại</th>
+                                                                <th class="border-top-0">URL</th>
+                                                                <th class="border-top-0">User</th>
+                                                                <th class="border-top-0">Password</th>
+                                                                <th class="border-top-0">Số lần</th>
+                                                                <th class="border-top-0">Tác vụ</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody class="text-muted">
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>
+                                                                    <i class="fa fa-download mr-2 text-warning"></i>
+                                                                    <p class="text-dark font-weight-bold">DOWN</p>
+                                                                </td>
+                                                                <td>https://github.com/Dung-PTiT</td>
+                                                                <td>admin@gmail.com</td>
+                                                                <td>admin123</td>
+                                                                <td>10</td>
+                                                                <td>
+                                                                    <a href="#" class="tooltip-wrapper  mr-4"
+                                                                       data-toggle="tooltip" data-placement="top"
+                                                                       title="" data-original-title="Edit">
+                                                                        <i class="fa fa-pencil text-info"></i>
+                                                                    </a>
+                                                                    <a href="#" class="tooltip-wrapper"
+                                                                       data-toggle="tooltip" data-placement="top"
+                                                                       title="" data-original-title="Delete">
+                                                                        <i class="fa fa-trash text-danger"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>
+                                                                    <i class="fa fa-upload mr-2 text-info"></i>
+                                                                    <p class="text-dark font-weight-bold">UP</p>
+                                                                </td>
+                                                                <td>https://github.com/Dung-PTiT</td>
+                                                                <td>admin@gmail.com</td>
+                                                                <td>admin123</td>
+                                                                <td>10</td>
+                                                                <td>
+                                                                    <a href="#" class="tooltip-wrapper  mr-4"
+                                                                       data-toggle="tooltip" data-placement="top"
+                                                                       title="" data-original-title="Edit">
+                                                                        <i class="fa fa-pencil text-info"></i>
+                                                                    </a>
+                                                                    <a href="#" class="tooltip-wrapper"
+                                                                       data-toggle="tooltip" data-placement="top"
+                                                                       title="" data-original-title="Delete">
+                                                                        <i class="fa fa-trash text-danger"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>
+                                                                    <i class="fa fa-hourglass-start mr-2 text-success"></i>
+                                                                    <p class="text-dark font-weight-bold">START</p>
+                                                                </td>
+                                                                <td>https://github.com/Dung-PTiT</td>
+                                                                <td>admin@gmail.com</td>
+                                                                <td>admin123</td>
+                                                                <td>10</td>
+                                                                <td>
+                                                                    <a href="#" class="tooltip-wrapper  mr-4"
+                                                                       data-toggle="tooltip" data-placement="top"
+                                                                       title="" data-original-title="Edit">
+                                                                        <i class="fa fa-pencil text-info"></i>
+                                                                    </a>
+                                                                    <a href="#" class="tooltip-wrapper"
+                                                                       data-toggle="tooltip" data-placement="top"
+                                                                       title="" data-original-title="Delete">
+                                                                        <i class="fa fa-trash text-danger"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>
+                                                                    <i class="fa fa-stop mr-2 text-danger"></i>
+                                                                    <p class="text-dark font-weight-bold">STOP</p>
+                                                                </td>
+                                                                <td>https://github.com/Dung-PTiT</td>
+                                                                <td>admin@gmail.com</td>
+                                                                <td>admin123</td>
+                                                                <td>10</td>
+                                                                <td>
+                                                                    <a href="#" class="tooltip-wrapper  mr-4"
+                                                                       data-toggle="tooltip" data-placement="top"
+                                                                       title="" data-original-title="Edit">
+                                                                        <i class="fa fa-pencil text-info"></i>
+                                                                    </a>
+                                                                    <a href="#" class="tooltip-wrapper"
+                                                                       data-toggle="tooltip" data-placement="top"
+                                                                       title="" data-original-title="Delete">
+                                                                        <i class="fa fa-trash text-danger"></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="mCSB_3_scrollbar_vertical"
+                                                 class="mCSB_scrollTools mCSB_3_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
+                                                 style="display: block;">
+                                                <div class="mCSB_draggerContainer">
+                                                    <div id="mCSB_3_dragger_vertical" class="mCSB_dragger"
+                                                         style="position: absolute; min-height: 50px; display: block; height: 161px; max-height: 266px; top: 0px;">
+                                                    </div>
+                                                    <div class="mCSB_draggerRail"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

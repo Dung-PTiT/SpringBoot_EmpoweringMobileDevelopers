@@ -4,9 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class PlanController {
-    @GetMapping("/displayPlan")
-    public String displayPlan(){
-        return "plan";
+public class PlanListController {
+
+    @GetMapping("/displayPlanList")
+    public String displayPlanList(){
+        return "planList";
     }
 }
